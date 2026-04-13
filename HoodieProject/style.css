@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* .montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+} */
+
+:root {
+  --background: #ffffff;
+  --section-background: #f7f7f7;
+  --text: #111111;
+  --muted-text: #555555;
+  --accent-btn: #2d6cdf;
+  --highlight: #f2c94c;
+  --card-background: #fafafa;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  padding: 1rem;
+}
+/*Navigation Bar*/
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+nav .logo h1 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text);
+}
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.burger span {
+  border: 2px solid black;
+  margin-bottom: 5px;
+  width: 30px;
+  cursor: pointer;
+}
+
+/*Header Section*/
+header {
+  padding: 1rem;
+  margin-top: 3rem;
+  background-color: var(--section-background);
+}
+.main-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+}
+.primary-headings {
+  margin: 1rem 0;
+  color: var(--muted-text);
+}
+.main-heading span {
+  color: var(--highlight);
+}
+.btns-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.main-btn {
+  background-color: var(--accent-btn);
+  color: var(--background);
+  padding: 0.35rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+.main-btn:hover {
+  background-color: var(--background);
+  color: var(--accent-btn);
+  border: 1px solid var(--accent-btn);
+}
+.primary-btn {
+  background-color: var(--background);
+  color: var(--accent-btn);
+  padding: 0.35rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  border: 1px solid var(--accent-btn);
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+.primary-btn:hover {
+  color: var(--background);
+  background-color: var(--accent-btn);
+}
+
+.img-container {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: none;
+}
+.header-img {
+  background: url(images/alireza-esmaeeli-BGSZ1t80rpM-unsplash.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+/*Section One Starts*/
+.section-one {
+  background-color: var(--background);
+  padding: 1rem;
+}
+.section-one-img {
+  background: url(images/joshua-rondeau-xazIYnxpS2Q-unsplash.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+/*Section -two starts */
+
+.section-two {
+  padding: 1rem;
+  background-color: var(--background);
+  margin-top: 2rem;
+}
+.section-two .btns-container {
+  margin-top: 1.35rem;
+}
+.section-two .main-heading {
+  text-align: center;
+}
+
+/* Products section */
+
+.product-items-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-items-container .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background-color: var(--card-background);
+}
+.item-layer {
+  max-width: 90%;
+  height: 40vw;
+  max-height: 300px;
+  padding: 1rem;
+  margin-bottom: 10px;
+}
+
+.item-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.item h4 {
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.item p {
+  color: var(--muted-text);
+}
+.item a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--accent-btn);
+}
+.item a:hover {
+  text-decoration: underline;
+}
+
+/* Customer Review-Section three */
+.section-three .main-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.customer-reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.customer {
+  background-color: var(--card-background);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+.customer h1 {
+  color: var(--text);
+  text-align: center;
+  font-size: 1.5rem;
+}
+.customer-description {
+  margin-top: 0.45rem;
+  color: var(--muted-text);
+  text-align: center;
+}
+.customer-img {
+  width: 120px;
+  height: 120px; /* ✅ equal = perfect circle */
+  border-radius: 50%;
+  overflow: hidden; /* ✅ important */
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* cleaner background */
+.img-one {
+  background: url("images/yogendra-singh-uWs_N5Dlyiw-unsplash.jpg") center/cover
+    no-repeat;
+}
+.img-two {
+  background: url("images/gesphotoss-1i9K55ni5Dk-unsplash.jpg") center/cover
+    no-repeat;
+}
+.img-three {
+  background: url("images/milan-popovic-kOnmHdLJTNI-unsplash.jpg") center/cover
+    no-repeat;
+}
+
+/*Footer Section */
+
+.footer {
+  margin-top: 2rem;
+  background-color: #ededed;
+  padding: 0.75rem;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-background);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.footer-heading {
+  color: var(--text);
+}
+.footer-section p {
+  color: var(--muted-text);
+}
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-weight: 800;
+  color: var(--text);
+}
+
+/* Media Quesries  for Responsiveness */
+
+@media (min-width: 768px) {
+  .main-heading {
+    font-size: 3.5rem;
+  }
+  .primary-headings {
+    font-size: 1.5rem;
+  }
+  header,
+  .section-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-content,
+  .section-one-content {
+    width: 800px;
+  }
+  .main-btn,
+  .primary-btn {
+    padding: 1rem 2rem;
+    font-size: 1.15rem;
+    border-radius: 10px;
+  }
+
+  .product-items-container {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  header .btns-container,
+  .section-one .btns-container {
+    justify-content: flex-start;
+  }
+  .footer {
+    padding: 1.15rem;
+  }
+  .footer-container {
+    padding: 1.25rem;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .customer-reviews {
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .img-container {
+    display: block;
+  }
+}
